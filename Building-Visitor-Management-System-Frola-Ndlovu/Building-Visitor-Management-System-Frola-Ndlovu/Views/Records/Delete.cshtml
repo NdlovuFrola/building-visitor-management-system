@@ -1,0 +1,56 @@
+﻿@model Building_Visitor_Management_System_Frola_Ndlovu.Models.Record
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Record</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenant.Fullname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenant.Fullname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Visitor.Fullname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Visitor.Fullname)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

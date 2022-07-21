@@ -1,0 +1,50 @@
+﻿@model Building_Visitor_Management_System_Frola_Ndlovu.Models.Record
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Record</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tenant.Fullname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tenant.Fullname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Visitor.Fullname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Visitor.Fullname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
